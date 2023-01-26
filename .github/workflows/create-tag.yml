@@ -15,3 +15,5 @@ jobs:
       - run: |
           git tag "${{ inputs.version }}"
           git push origin "${{ inputs.version }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT}}
